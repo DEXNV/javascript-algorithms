@@ -10,11 +10,12 @@
 
 function anagram(str1, str2) {
     if (str1.length !== str2.length) return false
+    else if (str1.toLowerCase() === str2.toLowerCase()) return false
 
-    str1 = str1.toLowerCase().split('').sort().join('')
-    str2 = str2.toLowerCase().split('').sort().join('')
+    const output1 = str1.toLowerCase().split('').sort().join('')
+    const output2 = str2.toLowerCase().split('').sort().join('')
 
-    return str1 === str2
+    return output1 === output2
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -7,14 +7,14 @@
 */
 
 function capitalize(str) {
-  if ((typeof str !== 'string')){
+  if (typeof str !== 'string'){
     return "Не тот тип данных";
   }
 
   if ((str === "") || (str === " ")) return str;
 
-  str = str.trim()
-  return str.split(' ').map(word => {
+  const output = str.trim()
+  return output.split(' ').map(word => {
           return `${word[0].toUpperCase()}${word.slice(1, word.length)}`;
     }).join(' ');
 }

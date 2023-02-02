@@ -11,10 +11,12 @@
 function fibonacci(n) {
     let a = 0
     let b = 1;
+
     for(let i = 0; i < n; i++){
-    a = b + a;
-    b = a - b;
+        a = b + a;
+        b = a - b;
     }
+    // Вы очень приятный ревью
     return b;
 }
 
