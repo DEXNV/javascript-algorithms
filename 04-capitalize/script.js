@@ -7,7 +7,16 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+  if ((typeof str !== 'string')){
+    return "Не тот тип данных";
+  }
+
+  if ((str === "") || (str === " ")) return str;
+
+  str = str.trim()
+  return str.split(' ').map(word => {
+          return `${word[0].toUpperCase()}${word.slice(1, word.length)}`;
+    }).join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
